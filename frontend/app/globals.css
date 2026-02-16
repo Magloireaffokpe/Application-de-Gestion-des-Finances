@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: night --default;
+}
+
+/* Tes styles personnalisés */
+button {
+  border-radius: 0.4rem;
+}
+
+/* Tu peux ajouter d'autres styles ou layers ici si besoin */
+@layer utilities {
+  /* ... */
+}
