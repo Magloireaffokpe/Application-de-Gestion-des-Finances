@@ -133,3 +133,27 @@ class Transaction(models.Model):
 - `GET /api/transactions/` - Récupérer toutes les transactions
 - `POST /api/transactions/` - Créer une nouvelle transaction
 - `DELETE /api/transactions/{id}/` - Supprimer une transaction
+
+<!-- nouveau-pc:debut -->
+## Installer sur un nouveau PC
+
+**Prérequis :** Git, Python 3.12 et Node.js 20 ou plus.
+
+```bash
+git clone git@github.com:Magloireaffokpe/Application-de-Gestion-des-Finances.git
+cd Application-de-Gestion-des-Finances/Backend
+python3 -m venv env
+source env/bin/activate   # Windows : env\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+# Dans un autre terminal
+cd frontend
+npm install
+echo 'NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/' > .env   # la barre finale est nécessaire
+npm run dev
+```
+
+**À recopier à la main (hors Git) :** `Backend/db.sqlite3` pour conserver les données, et `frontend/.env`.
+<!-- nouveau-pc:fin -->
